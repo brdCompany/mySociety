@@ -1,0 +1,50 @@
+<h1>Post create component</h1>
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form  [formGroup]="form" (submit)="onSaveOwner()"  *ngIf="!isLoading">
+
+    <input type="text"
+           formControlName="name"
+           placeholder="Enter owner name">
+    <mat-error *ngIf="form.get('name').invalid">Please enter a name of the owner</mat-error>
+
+    <input type="text"
+           formControlName="coownername"
+           placeholder="Enter co-owner name">
+
+    <input type="text"
+           formControlName="societyname"
+           placeholder="Enter societyname name">
+
+    <input type="text"
+           formControlName="block"
+           placeholder="Enter block name">
+    <input type="text"
+           formControlName="flatno"
+           placeholder="Enter flat number">
+    <input type="text"
+           formControlName="primarymobile"
+           placeholder="Enter owner primary mobile number">
+    <input type="text"
+           formControlName="secondarymobile"
+           placeholder="Enter owner secondarymobile mobile number">
+
+    <input type="text"
+           formControlName="primaryemail"
+           placeholder="Enter owner primaryemail">
+
+    <input type="text"
+           formControlName="isresident"
+           placeholder="Enter Yes or No">
+
+<button mat-raised-button
+        color="accent"
+        type="submit"
+        mat-raised-button color="primary">Save Owner</button>
+
+</form>
+</mat-card>
+
+
+
+

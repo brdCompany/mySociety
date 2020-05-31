@@ -1,0 +1,17 @@
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-accordion *ngIf="owners.length >0 && !isLoading">
+  <mat-expansion-panel *ngFor="let owner of owners">
+    <mat-expansion-panel-header>
+      {{owner.name}}
+    </mat-expansion-panel-header>
+
+    <p>{{owner.societyname}}</p>
+    <p>{{owner.id}}</p>
+    <mat-action-row>
+      <a  mat-button color="accent" [routerLink]="['/edit', owner.id]">EDIT</a>
+      <button mat-button color="warn" (click)="onDelete(owner.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="owners.length <= 0 && !isLoading" > No owners added yet</p>
