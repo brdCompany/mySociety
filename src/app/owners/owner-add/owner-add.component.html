@@ -1,41 +1,72 @@
-<h1>Post create component</h1>
+<h3>Please add owner's details</h3>
 <mat-card>
   <mat-spinner *ngIf="isLoading"></mat-spinner>
   <form  [formGroup]="form" (submit)="onSaveOwner()"  *ngIf="!isLoading">
 
-    <input type="text"
-           formControlName="name"
-           placeholder="Enter owner name">
-    <mat-error *ngIf="form.get('name').invalid">Please enter a name of the owner</mat-error>
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter owner name</mat-label>
+      <input  matInput formControlName="name" placeholder="Enter owner name">
+    </mat-form-field>
 
-    <input type="text"
-           formControlName="coownername"
-           placeholder="Enter co-owner name">
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter co-owner name</mat-label>
+      <input  matInput formControlName="coownername" placeholder="Enter co-owner name">
+    </mat-form-field>
 
-    <input type="text"
-           formControlName="societyname"
-           placeholder="Enter societyname name">
 
-    <input type="text"
-           formControlName="block"
-           placeholder="Enter block name">
-    <input type="text"
-           formControlName="flatno"
-           placeholder="Enter flat number">
-    <input type="text"
-           formControlName="primarymobile"
-           placeholder="Enter owner primary mobile number">
-    <input type="text"
-           formControlName="secondarymobile"
-           placeholder="Enter owner secondarymobile mobile number">
+    <mat-form-field>
+      <mat-label>Select your sciety name</mat-label>
+      <mat-select formControlName="societyname">
+        <mat-option>None</mat-option>
+        <mat-option value="SunriseGreens-MIG">SunriseGreens-MIG</mat-option>
+        <mat-option value="SunriseGreens-HIG">SunriseGreens-HIG</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-    <input type="text"
-           formControlName="primaryemail"
-           placeholder="Enter owner primaryemail">
 
-    <input type="text"
-           formControlName="isresident"
-           placeholder="Enter Yes or No">
+     <mat-form-field>
+      <mat-label>Select an block</mat-label>
+      <mat-select formControlName="block">
+        <mat-option>None</mat-option>
+        <mat-option value="MIG">MIG</mat-option>
+        <mat-option value="A">A</mat-option>
+        <mat-option value="B">B</mat-option>
+        <mat-option value="C">C</mat-option>
+        <mat-option value="D">D</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter flat number</mat-label>
+      <input  matInput formControlName="flatno"
+            placeholder="Ex. 100">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter owner primary mobile number</mat-label>
+      <input  matInput formControlName="primarymobile"
+            placeholder="Ex. 9876543210">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter owner secondarymobile mobile number</mat-label>
+      <input matInput formControlName="secondarymobile"
+            placeholder="Ex. 9876543210">
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="primaryemail"
+           placeholder="Ex. xyz@abc.com">
+
+  </mat-form-field>
+
+
+  <mat-radio-group aria-label="Are you residing now?" formControlName="isresident">
+    <mat-label>Are you residing now?</mat-label>
+    <mat-radio-button value="Yes">Yes</mat-radio-button>
+    <mat-radio-button value="No">No</mat-radio-button>
+  </mat-radio-group>
 
 <button mat-raised-button
         color="accent"

@@ -6,7 +6,9 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -37,6 +39,8 @@ import { OwnerListComponent } from './owners/owner-list/owner-list.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,

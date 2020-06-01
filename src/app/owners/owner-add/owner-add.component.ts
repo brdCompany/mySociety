@@ -33,19 +33,19 @@ export class OwnerAddComponent implements OnInit{
         validators: [Validators.required, Validators.minLength(1)]
       }),
       flatno: new FormControl(null, {
-        validators: [Validators.required, Validators.minLength(1)]
+        validators: [Validators.required, Validators.pattern("^[0-9]*$")]
       }),
       primarymobile: new FormControl(null, {
-        validators: [Validators.required, Validators.minLength(9)]
+        validators: [Validators.required, Validators.minLength(9), Validators.maxLength(11), Validators.pattern("^[0-9]*$")]
       }),
       secondarymobile: new FormControl(null, {
-        validators: []
+        validators: [Validators.minLength(9), Validators.maxLength(11), Validators.pattern("^[0-9]*$")]
       }),
       primaryemail: new FormControl(null, {
-        validators: [Validators.required]
+        validators: [Validators.required, Validators.email]
       }),
       isresident: new FormControl(null, {
-        validators: []
+        validators: [Validators.required]
       })
     });
 
