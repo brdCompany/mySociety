@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -7,6 +7,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+
+  @Output() public sidenavToggle = new EventEmitter();
 
   userAuthenticated = false;
 
@@ -22,6 +24,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
       this.userAuthenticated = true;
 
+  }
+
+  public onToggleSidenav = () => {
+    this.sidenavToggle.emit();
   }
 
   ngOnDestroy() {

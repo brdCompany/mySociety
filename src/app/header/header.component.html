@@ -1,22 +1,27 @@
 <mat-toolbar color="primary">
-  <span><a routerLink="/">My Society</a></span>
-  <span class="spacer"></span>
-  <ul>
-
-    <li >
-      <a mat-button routerLink="/owner-list" routerLinkActive="mat-accent">Owners</a>
-    </li>
-    <li >
-      <a mat-button routerLink="/addowner" routerLinkActive="mat-accent">Add Owner</a>
-    </li>
-    <li >
-      <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a>
-    </li>
-    <li >
-      <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a>
-    </li>
-
-
-
-  </ul>
+ <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</div>
+<div>
+    <a routerLink="/owner-list">Sunrise Greens</a>
+</div>
+<span class="spacer"></span>
+<div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li >
+        <a mat-button routerLink="/owner-list" routerLinkActive="mat-accent">Owners</a>
+      </li>
+      <li >
+        <a mat-button routerLink="/addowner" routerLinkActive="mat-accent">Add Owner</a>
+      </li>
+      <li >
+        <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a>
+      </li>
+      <li >
+        <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a>
+      </li>
+    </ul>
+</div>
 </mat-toolbar>
