@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bills</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&display=swap" rel="stylesheet">
+  <body>
+    <nav id="navbar">
+      <h1 class="logo"><i class="fa fa-home p-1"></i>My Society</h1>
+      <ul>
+        <li>
+          <i class="fa fa-bell-o p-1"></i><a href="#">My Notifications</a>
+        </li>
+        <li><i class="fa fa-user-circle-o p-1"></i><a href="#">Username</a></li>
+      </ul>
+    </nav>
+
+    <section id="content">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="my_bills.html"><i class="fa fa-file-text-o"></i>My Bills</a>
+            <a href="my_tenants.html"><i class="fa fa-users"></i>My Tenants</a>
+            <a href="#"><i class="fa fa-ticket"></i>My Complains</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content-heading p-1">
+          My Bills
+        </h1>
+        <p class="main-content-sub-heading">
+          Manage and organise your bills
+        </p>
+        <div class="box">
+          <p class="box-header">Your Pending bills</p class="box-header">
+          <div class="bill-info">
+            <h4>Bill Due Date <span class="value">27/07/2020</span></h4>
+            <h4>Bill Amount <span class="value">Rs 2200/-</span></h4>
+            <h4>Bill Overdue by <span class="value">5 days</span></h4>
+            <h4>Late Charges <span class="value">Rs 5</span></h4>
+            <h4>Total Payable Amount <span class="value">Rs 2205/-</span></h4>
+          </div>
+          <div class="box-action-button"><a href="#" class="btn btn-light">Pay Now</a></div>
+          
+        </div>
+
+<!-- Previous bills section -->
+        <h1 class="main-content-heading p-1">
+          Bill payment history
+        </h1>
+        <p class="main-content-sub-heading">
+          Find your bill payment history here
+        </p>
+        <div class="box">
+
+          <p class="box-header">Bill history 
+            <select class="year-dropdown" name="year" id="year">
+              <option value="volvo" class="py-1">Select Year</option>
+              <option value="volvo" class="py-1">Current Year</option>
+              <option value="volvo" class="py-1">2019-20</option>
+              <option value="volvo" class="py-1">2018-19</option>
+            </select>
+          </p>
+          
+          <table>
+            <thead>
+              <tr class="table-head-row">
+                <td>Bill No</td>
+                <td>Bill Date</td>
+                <td>Bill Amount (Rs)</td>
+                <td>Payment Method</td>
+                <td>Payment Date</td>
+                <td>Transaction ID</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-body-row">
+                <td class="py-1">123456789</td>
+                <td>22/06/2020</td>
+                <td>2200</td>
+                <td>Paytm</td>
+                <td>21/06/2020</td>
+                <td>fhh37hfhf7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

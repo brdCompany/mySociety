@@ -1,0 +1,235 @@
+:root {
+  --primary-color: #009688;
+  --light-color: #f7f7f7;
+  --dark-color: #333;
+  --secondary-color: #e65100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Raleway', sans-serif; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.py-1 {
+  padding: 1.5rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+
+#navbar {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background: var(--primary-color);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#navbar h1 {
+  cursor: pointer;
+}
+#navbar h1:hover,
+#navbar i:hover {
+  opacity: 0.8;
+  transition: all 0.5s ease-in;
+}
+#navbar ul {
+  display: flex;
+}
+
+#navbar ul li {
+  font-size: 1.2rem;
+}
+
+#navbar ul li i {
+  padding-right: 0.5rem;
+}
+
+#navbar ul li a:hover,
+#navbar ul li i:hover {
+  opacity: 0.8;
+  transition: all 0.5s ease-in;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+#content .sidebar {
+  width: 200px;
+  background: var(--light-color);
+  height: 100%;
+}
+
+#content .main-content {
+  width: 100%;
+  position: absolute;
+  left: 200px;
+  height: 100%;
+  /* background: var(--primary-color); */
+  background: white;
+}
+
+#content .sidebar ul li a {
+  display: block;
+  padding: 1rem;
+  color: var(--dark-color);
+}
+#content .sidebar ul li a i {
+  padding-right: 0.5rem;
+}
+
+#content .sidebar ul li a:hover {
+  background: var(--primary-color);
+  color: white;
+  transition: all 0.3s ease-in;
+}
+
+#content .main-content .main-content-heading {
+  color: var(--dark-color);
+  font-size: 1.2rem;
+}
+
+#content .main-content .main-content-sub-heading {
+  padding-left: 1.2rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid var(--light-color);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  width: 85%;
+  background: var(--light-color);
+}
+
+.box .box-header {
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.box .box-action-button {
+  text-align: end;
+}
+.bill-info {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+}
+
+.bill-info h4 {
+  padding: 0.5rem;
+}
+
+.value {
+  color: var(--primary-color);
+}
+
+.btn {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+}
+
+.box-action-button a:hover {
+  opacity: 0.7;
+  transition: all 0.5s ease-in;
+  color: var(--dark-color);
+}
+.table-head-row {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.table-body-row {
+  padding: 1rem;
+}
+.year-dropdown {
+  width: 150px;
+  border-style: none;
+  border: 0.5px solid #777;
+  background: var(--light-color);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  font-family: inherit;
+}
+.tenant-info {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+
+.tenant-info h4 {
+  padding: 1rem;
+}
+.tenant-info-sub-heading {
+  columns: var(--dark-color);
+}
+
+.landing-content {
+  background: url('./img/white-house-1475938.jpg') center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.landing-content h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.landing-content p {
+  font-size: 2rem;
+  padding: 2rem;
+  color: var(--light-color);
+}
