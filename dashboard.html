@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <nav id="navbar">
+      <h1 class="logo"><i class="fa fa-home p-1"></i>My Society</h1>
+      <ul>
+        <li>
+          <i class="fa fa-bell-o p-1"></i><a href="#">My Notifications</a>
+        </li>
+        <li><i class="fa fa-user-circle-o p-1"></i><a href="#">Username</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-dashboard">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="dashboard.html"
+              ><i class="fa fa-file-text-o"></i>My Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="my_bills.html"
+              ><i class="fa fa-file-text-o"></i>My Bills</a
+            >
+            <a href="my_tenants.html"><i class="fa fa-users"></i>My Tenants</a>
+            <a href="#"><i class="fa fa-ticket"></i>My Complains</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- My flat section -->
+      <div>
+        <h1 class="main-content-heading p-1">My Flat</h1>
+        <div class="box grid-two-by-four">
+          <h4>Owner Name <span class="value">Bulbul Alamgir</span></h4>
+          <h4>Co-Owner Name <span class="value">Mrs Alamgir</span></h4>
+          <h4>Primary Contact No <span class="value">8520147369</span></h4>
+          <h4>Secondary Contact No <span class="value">9856321470</span></h4>
+          <h4>Flat No <span class="value">8</span></h4>
+          <h4>Block No <span class="value">4A</span></h4>
+          <h4>
+            Email Address <span class="value">bulbul.alamgir@gmail.com</span>
+          </h4>
+          <h4>Tenants <span class="value">1</span></h4>
+        </div>
+
+        <!-- my bills and my meeting sections -->
+        <section id="grid-one-by-two">
+          <div class="box">
+            <h3>My Bills</h3>
+            <h4 class="py-1">Pending Payments</h4>
+            <div class="small-box bg-light">
+              <h5>Due Date</h5>
+              <h5 class="value">20/06/2020</h5>
+              <h5>Late Fine</h5>
+              <h5 class="value">Rs 5</h5>
+              <h5>Payment Amount</h5>
+              <h5 class="value">Rs 2205</h5>
+              <a href="" class="btn btn-light">Pay Now</a>
+            </div>
+          </div>
+          <div class="box">
+            <h3>My Meetings</h3>
+            <p class="py-1">
+              Next Monthly Maintenance Meeting on
+              <span class="value">22nd July 2020 @ 10:30AM</span>
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- notice board section -->
+      <div class="box-notice bg-grey">
+        <h3 class="p-1">Noticeboard</h3>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
