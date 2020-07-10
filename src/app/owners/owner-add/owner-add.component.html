@@ -1,0 +1,81 @@
+<h3>Please add owner's details</h3>
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form  [formGroup]="form" (submit)="onSaveOwner()"  *ngIf="!isLoading">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter owner name</mat-label>
+      <input  matInput formControlName="name" placeholder="Enter owner name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter co-owner name</mat-label>
+      <input  matInput formControlName="coownername" placeholder="Enter co-owner name">
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>Select your sciety name</mat-label>
+      <mat-select formControlName="societyname">
+        <mat-option>None</mat-option>
+        <mat-option value="SunriseGreens-MIG">SunriseGreens-MIG</mat-option>
+        <mat-option value="SunriseGreens-HIG">SunriseGreens-HIG</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+     <mat-form-field>
+      <mat-label>Select an block</mat-label>
+      <mat-select formControlName="block">
+        <mat-option>None</mat-option>
+        <mat-option value="MIG">MIG</mat-option>
+        <mat-option value="A">A</mat-option>
+        <mat-option value="B">B</mat-option>
+        <mat-option value="C">C</mat-option>
+        <mat-option value="D">D</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter flat number</mat-label>
+      <input  matInput formControlName="flatno"
+            placeholder="Ex. 100">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter owner primary mobile number</mat-label>
+      <input  matInput formControlName="primarymobile"
+            placeholder="Ex. 9876543210">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter owner secondarymobile mobile number</mat-label>
+      <input matInput formControlName="secondarymobile"
+            placeholder="Ex. 9876543210">
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="primaryemail"
+           placeholder="Ex. xyz@abc.com">
+
+  </mat-form-field>
+
+
+  <mat-radio-group aria-label="Are you residing now?" formControlName="isresident">
+    <mat-label>Are you residing now?</mat-label>
+    <mat-radio-button value="Yes">Yes</mat-radio-button>
+    <mat-radio-button value="No">No</mat-radio-button>
+  </mat-radio-group>
+
+<button mat-raised-button
+        color="accent"
+        type="submit"
+        mat-raised-button color="primary">Save Owner</button>
+
+</form>
+</mat-card>
+
+
+
+
