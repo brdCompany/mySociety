@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
 :root {
   --primary-color: #009688;
   --light-color: #f7f7f7;
@@ -12,8 +14,9 @@
 }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
   /* font-family: 'Raleway', sans-serif; */
+  font-family: "Nunito", sans-serif;
 }
 
 a {
@@ -25,6 +28,9 @@ ul {
   list-style: none;
 }
 
+.px-1 {
+  padding: 0 1.5rem;
+}
 .py-1 {
   padding: 1.5rem 0;
 }
@@ -54,6 +60,8 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid #ccc;
 }
 
 #navbar h1 {
@@ -69,10 +77,19 @@ ul {
 }
 
 #navbar ul li {
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
 }
 
 #navbar ul li i {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+
+#navbar ul li a {
   padding-right: 0.5rem;
 }
 
@@ -85,12 +102,9 @@ ul {
 #content {
   display: grid;
   grid-template-columns: 1fr 6fr;
-  position: absolute;
-  top: 70px;
-  left: 0px;
   width: 100%;
-  height: 90vh;
-  overflow: hidden;
+  height: 100%;
+  /* overflow: hidden; */
 }
 
 .sidebar {
@@ -172,6 +186,20 @@ ul {
   display: inline-block;
 }
 
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+
+.btn-light {
+  background: var(--light-color);
+  color: var(--primary-color);
+}
+.btn-dark {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
 .box-action-button a:hover {
   opacity: 0.7;
   transition: all 0.5s ease-in;
@@ -207,7 +235,7 @@ ul {
 }
 
 .landing-content {
-  background: url('./img/white-house-1475938.jpg') center center/cover;
+  background: url("./img/white-house-1475938.jpg") center center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,15 +258,29 @@ ul {
   padding: 2rem;
   color: var(--light-color);
 }
+
+.landing-content-btn {
+  display: inline;
+}
+.landing-content-btn a {
+  margin: 0 1rem;
+  padding: 1rem 2rem;
+}
+.landing-content-btn a:hover {
+  background: var(--dark-color);
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
 .content-dashboard {
   display: grid;
   grid-template-columns: 1fr 5fr 2fr;
-  position: absolute;
+  margin-top: 70px;
+  /* position: absolute;
   top: 70px;
   left: 0px;
   width: 100%;
   height: 90vh;
-  overflow: hidden;
+  overflow: hidden; */
 }
 .grid-two-by-four {
   display: grid;
@@ -261,7 +303,7 @@ ul {
 .small-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--light-color);
+  border: 1px soli var(--light-color);
   border-radius: 5px;
   padding: 1rem;
   text-align: center;
@@ -273,6 +315,11 @@ ul {
 }
 .small-box :nth-child(7) {
   grid-column: 1 / span 2;
+}
+.small-box a:hover {
+  background: var(--dark-color);
+  color: var(--light-color);
+  transition: all 0.5s ease-in-out;
 }
 .box-notice {
   margin: 1rem 2rem;
@@ -295,7 +342,7 @@ ul {
 .box-form {
   max-width: 30rem;
 }
-.box-form .btn-light {
+.box-form .btn-primary {
   padding: 1rem 2rem;
 }
 .box-form p {
@@ -311,12 +358,14 @@ ul {
   width: 100%;
   margin: 1rem 0;
   padding: 0.5rem;
+  border-radius: 5px;
 }
 .form-group input {
-  border: 1px solid var(--light-color);
+  border: 1px solid #ccc;
 }
 
-@media screen and (max-width: 400px) {
+/* Ipad */
+@media screen and (max-width: 768px) {
   #navbar i {
     padding: 1rem;
   }
@@ -338,5 +387,83 @@ ul {
   }
   .box-form p {
     font-size: 0.8rem;
+  }
+  .content-dashboard {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+  }
+  #grid-one-by-two {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Phone */
+@media screen and (max-width: 421px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  #navbar i {
+    padding: 1rem;
+  }
+  #navbar h1 {
+    font-size: 1rem;
+  }
+  #navbar ul li {
+    font-size: 0.8rem;
+  }
+  #navbar ul li i,
+  #navbar ul li a {
+    padding: 1rem 0.5rem;
+  }
+  .landing-content h1 {
+    font-size: 2.5rem;
+  }
+  .landing-content p {
+    font-size: 1.5rem;
+  }
+
+  .box-form {
+    max-width: 80%;
+  }
+  .box-form p {
+    font-size: 0.8rem;
+  }
+  .sidebar {
+    display: none;
+  }
+  #content {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: auto;
+    height: 100%;
+  }
+  .content-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #grid-one-by-two {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .box {
+    width: 91.75%;
+    margin: 0 1rem;
+  }
+  .grid-two-by-four {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .small-box h5 {
+    font-size: 0.8rem;
+  }
+  .box-notice {
+    margin: 1rem 1rem;
   }
 }
