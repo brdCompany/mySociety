@@ -11,6 +11,7 @@
     <mat-action-row>
       <a  mat-button color="accent" [routerLink]="['/edit', owner.id]">EDIT</a>
       <button mat-button color="warn" (click)="onDelete(owner.id)">DELETE</button>
+      <button mat-button color="warn" (click)="sendEmail()">Send email</button>
     </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>

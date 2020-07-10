@@ -104,4 +104,12 @@ export class OwnerService {
         this.ownerUpdated.next([...this.owners]);
       });
   }
+  sendEmail() {
+    const temp = {email:'bulbul.alamgir@gmail.com', password:'pass'};
+    this.httpClient.post('http://localhost:3000/api/user/sendmail', temp)
+      .subscribe(() => {
+        console.log('Email sent...');
+
+      });
+  }
 }

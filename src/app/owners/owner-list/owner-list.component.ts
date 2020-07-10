@@ -44,6 +44,10 @@ export class OwnerListComponent implements OnInit, OnDestroy{
     this.ownerService.deleteOwner(ownerId);
   }
 
+  sendEmail() {
+    this.ownerService.sendEmail();
+  }
+
   ngOnDestroy() {
     this.ownersSub.unsubscribe();
     // this.authLitenerSubs.unsubscribe();

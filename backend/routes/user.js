@@ -3,11 +3,16 @@ const User =  require('../models/user');
 const Owner =  require('../models/owner');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const checkAuth = require('../middleware/check-auth');
+
+const cors = require("cors");
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const router = express.Router();
 
 router.post('/signup', (req, res, next) => {
-  console.log(req.body.email);
+  console.log("I am in signup:"+ req.body.email);
   console.log(req.body.password);
   bcrypt.hash(req.body.password, 10)
   .then(hash => {
@@ -30,10 +35,11 @@ router.post('/signup', (req, res, next) => {
 
 router.post('/login', (req, res, next) => {
   let fetchedUser;
+  console.log(req.body.email);
   User.findOne({email: req.body.email}).then( user => {
     if(!user) {
       return res.status(401).json({
-        message: 'Auth failed'
+        message: 'User Authentication failed'
       });
     }
     fetchedUser = user;
@@ -43,11 +49,11 @@ router.post('/login', (req, res, next) => {
   .then(result => {
     if(!result){
       return res.status(401).json({
-        message: 'Auth failed'
+        message: 'User Authentication failed'
       });
     }
-    const token = jwt.sign({email: fetchedUser.email, userId: fetchedUser._id}, 'secret_this_should_be_longer',
-                           {expiresIn: '1h'});
+    const token = jwt.sign({email: fetchedUser.email, userId: fetchedUser._id},
+                            'secret_this_should_be_longer', {expiresIn: '1h'});
     res.status(200).json({
       token: token,
       expiresIn: 3600
@@ -62,7 +68,7 @@ router.post('/login', (req, res, next) => {
 
 //Owners related operations
 
-router.post('/addOwner', (req, res, next) => {
+router.post('/addOwner', checkAuth, (req, res, next) => {
       console.log(req.body.name);
     const owner = new Owner({
       name: req.body.name,
@@ -88,7 +94,7 @@ router.post('/addOwner', (req, res, next) => {
     });
   });
 
-  router.put('/:id', (req, res, next) => {
+  router.put('/:id', checkAuth, (req, res, next) => {
 
     const owner = new Owner({
       _id: req.params.id,
@@ -110,7 +116,7 @@ router.post('/addOwner', (req, res, next) => {
       });
   });
 
-  router.get('', (req, res, next) => {
+  router.get('', checkAuth, (req, res, next) => {
     Owner.find()
     .then(documents => {
       res.status(200).json({
@@ -120,7 +126,7 @@ router.post('/addOwner', (req, res, next) => {
     });
   });
 
-  router.get('/:id', (req, res, next) => {
+  router.get('/:id', checkAuth, (req, res, next) => {
     Owner.findById(req.params.id).then(owner => {
       if (owner) {
         res.status(200).json(owner);
@@ -130,12 +136,52 @@ router.post('/addOwner', (req, res, next) => {
     });
   });
 
-  router.delete('/:id', (req, res, next) => {
+  router.delete('/:id', checkAuth, (req, res, next) => {
     Owner.deleteOne({_id: req.params.id}).then(result => {
       console.log(result);
       res.status(200).json({message: 'Owner deleted from DB!'});
     });
   });
+
+  // define a sendmail endpoint, which will send emails and response with the corresponding status
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
+
+  router.post("/sendmail", checkAuth, (req, res) => {
+  console.log("request came");
+  let user = req.body;
+  sendMail(user, (err, info) => {
+    if (err) {
+      console.log(err);
+      res.status(400);
+      res.send({ error: "Failed to send email" });
+    } else {
+      console.log("Email has been sent");
+      res.send(info);
+    }
+  });
+});
+
+const sendMail = (user, callback) => {
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+    user: "bulbul.alamgir@gmail.com",
+    pass: "BBBBBB"
+  }
+  });
+
+  const mailOptions = {
+    from: 'dsobnam@gmail.com',
+    to: 'bulbul.alamgir@gmail.com',
+    subject: 'Sending Email using Node.js',
+    text: 'That was easy!'
+  };
+
+  transporter.sendMail(mailOptions, callback);
+
+
+}
 
 
 module.exports = router;

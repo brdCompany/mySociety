@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {A11yModule} from '@angular/cdk/a11y';
 import {ClipboardModule} from '@angular/cdk/clipboard';
@@ -63,6 +64,7 @@ import { OwnerAddComponent } from './owners/owner-add/owner-add.component';
 import { OwnerListComponent } from './owners/owner-list/owner-list.component';
 import { SidenavMenulistComponent } from './menu/sidenav-menulist.component';
 import { CommonModule } from '@angular/common';
+import { AuthInterceptor } from './auth/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -125,7 +127,8 @@ import { CommonModule } from '@angular/common';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
-    CommonModule
+    CommonModule,
+    FlexLayoutModule
   ],
   exports: [
     MatTabsModule,
@@ -135,7 +138,7 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatListModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {

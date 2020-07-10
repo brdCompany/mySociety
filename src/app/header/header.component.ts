@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -14,16 +15,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   private authLitenerSubs: Subscription;
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   onLogout() {
-
+    this.authService.logout();
   }
 
   ngOnInit() {
-
-      this.userAuthenticated = true;
-
+    this.userAuthenticated = this.authService.getIsAuth();
+    this.authLitenerSubs = this.authService.getAuthStatusLitener().subscribe(isAuthenticated => {
+      this.userAuthenticated = isAuthenticated;
+    });
   }
 
   public onToggleSidenav = () => {
@@ -31,7 +33,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-
+    this.authLitenerSubs.unsubscribe();
   }
 
 
