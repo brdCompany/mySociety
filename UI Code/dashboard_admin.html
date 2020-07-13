@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <nav id="navbar">
+      <h1 class="logo">
+        <i class="fa fa-home p-1"></i><a href="index.html">My Society</a>
+      </h1>
+      <ul>
+        <li><i class="fa fa-bell-o p-1"></i><a href="#">Notifications</a></li>
+        <li><i class="fa fa-comments p-1"></i><a href="#">Noticeboard</a></li>
+        <li><i class="fa fa-user-circle-o p-1"></i><a href="#">Username</a></li>
+        <li>
+          <i class="fa fa-user-circle-o p-1"></i
+          ><a href="dashboard_admin.html">Admin</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="content-dashboard">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="dashboard.html"
+              ><i class="fa fa-file-text-o"></i>My Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="my_bills.html"
+              ><i class="fa fa-user-secret" aria-hidden="true"></i>Owners</a
+            >
+            <a href="my_tenants.html"><i class="fa fa-money"></i>Billing</a>
+            <a href="#"><i class="fa fa-ticket"></i>Complain</a>
+            <a href="#"><i class="fa fa-envelope"></i>Notices</a>
+            <a href="#"><i class="fa fa-cog"></i>Maintenance</a>
+            <a href="#"><i class="fa fa-users"></i>Staff & Payroll</a>
+            <a href="#"><i class="fa fa-cart-plus"></i>Vendors</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <!-- owner requests and complaints sections -->
+        <section id="grid-one-by-two">
+          <div>
+            <h1 class="main-content-heading p-1">Owner's Requests</h1>
+            <div class="box">
+              <h4 class="py-1">Pending Payments</h4>
+              <div class="small-box bg-light">
+                <h5>Due Date</h5>
+                <h5 class="value">20/06/2020</h5>
+                <h5>Late Fine</h5>
+                <h5 class="value">Rs 5</h5>
+                <h5>Payment Amount</h5>
+                <h5 class="value">Rs 2205</h5>
+                <a href="" class="btn btn-primary">Pay Now</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1 class="main-content-heading p-1">Complain</h1>
+            <div class="box">
+              <p class="py-1">
+                Next Monthly Maintenance Meeting on
+                <span class="value">22nd July 2020 @ 10:30AM</span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- billing and upcoming meetings sections -->
+        <section id="grid-one-by-two">
+          <div>
+            <h1 class="main-content-heading p-1">Billing</h1>
+            <div class="box">
+              <h4 class="py-1">Pending Payments</h4>
+              <div class="small-box bg-light">
+                <h5>Due Date</h5>
+                <h5 class="value">20/06/2020</h5>
+                <h5>Late Fine</h5>
+                <h5 class="value">Rs 5</h5>
+                <h5>Payment Amount</h5>
+                <h5 class="value">Rs 2205</h5>
+                <a href="" class="btn btn-primary">Pay Now</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1 class="main-content-heading p-1">Upcoming Meetings</h1>
+            <div class="box">
+              <p class="py-1">
+                Next Monthly Maintenance Meeting on
+                <span class="value">22nd July 2020 @ 10:30AM</span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- maintenance and payroll processing sections -->
+        <section id="grid-one-by-two">
+          <div>
+            <h1 class="main-content-heading p-1">Maintenance</h1>
+            <div class="box">
+              <h4 class="py-1">Pending Payments</h4>
+              <div class="small-box bg-light">
+                <h5>Due Date</h5>
+                <h5 class="value">20/06/2020</h5>
+                <h5>Late Fine</h5>
+                <h5 class="value">Rs 5</h5>
+                <h5>Payment Amount</h5>
+                <h5 class="value">Rs 2205</h5>
+                <a href="" class="btn btn-primary">Pay Now</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1 class="main-content-heading p-1">Payroll Processing</h1>
+            <div class="box">
+              <p class="py-1">
+                Next Monthly Maintenance Meeting on
+                <span class="value">22nd July 2020 @ 10:30AM</span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- vendor management sections -->
+        <section id="grid-one-by-two">
+          <div>
+            <h1 class="main-content-heading p-1">Vendor Management</h1>
+            <div class="box">
+              <h4 class="py-1">Pending Payments</h4>
+              <div class="small-box bg-light">
+                <h5>Due Date</h5>
+                <h5 class="value">20/06/2020</h5>
+                <h5>Late Fine</h5>
+                <h5 class="value">Rs 5</h5>
+                <h5>Payment Amount</h5>
+                <h5 class="value">Rs 2205</h5>
+                <a href="" class="btn btn-primary">Pay Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- <div>
+            <h1 class="main-content-heading p-1"></h1>
+            <div class="box">
+              <p class="py-1">
+                Next Monthly Maintenance Meeting on
+                <span class="value">22nd July 2020 @ 10:30AM</span>
+              </p>
+            </div>
+          </div> -->
+        </section>
+      </div>
+
+      <!-- notice board section -->
+      <div class="box-notice bg-grey">
+        <h3 class="p-1">Noticeboard</h3>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
