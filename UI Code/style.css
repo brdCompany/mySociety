@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #009688;
-  --light-color: #f7f7f7;
+  --light-color: #f3f3f3;
   --dark-color: #333;
   --secondary-color: #e65100;
 }
@@ -26,6 +26,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+.px-half {
+  padding: 0 0.5rem;
 }
 
 .px-1 {
@@ -161,7 +165,7 @@ ul {
   border: 1px solid var(--light-color);
   border-radius: 5px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 1rem;
   width: 100%;
   background: var(--light-color);
 }
@@ -224,6 +228,16 @@ ul {
   color: var(--light-color);
   transition: 0.5s all ease-in-out;
 }
+
+.text-primary {
+  color: var(--primary-color);
+}
+.text-dark {
+  color: var(--dark-color);
+}
+.text-light {
+  color: var(--light-color);
+}
 .box-action-button a:hover {
   opacity: 0.7;
   transition: all 0.5s ease-in;
@@ -267,8 +281,15 @@ ul {
   justify-content: center;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   /* margin-top: 70px; */
+}
+
+.landing-content .box {
+  margin-top: 15rem;
+}
+.custom-img-bg {
+  height: 100vh;
 }
 
 .landing-content h1 {
@@ -326,6 +347,9 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+#grid-one-by-two h1 {
+  color: var(--primary-color);
 }
 .bg-light {
   background: white;
@@ -406,6 +430,7 @@ ul {
 .roles {
   display: flex;
   flex-direction: row;
+  padding-top: 1rem;
 }
 .form-group input[type="radio"] {
   width: 5%;
@@ -417,6 +442,9 @@ ul {
   background-color: var(--primary-color);
   color: red;
 }
+.form-group input[type="text"] {
+  padding-top: 0.25rem;
+}
 
 /*-- Admin--*/
 
@@ -424,6 +452,15 @@ ul {
 @media screen and (max-width: 768px) {
   #navbar i {
     padding: 1rem;
+  }
+  .landing-content {
+    height: 100%;
+  }
+  .custom-img-bg {
+    height: 100vh;
+  }
+  .register {
+    margin-top: 3rem;
   }
   .landing-content h1 {
     font-size: 2.5rem;
@@ -438,7 +475,10 @@ ul {
     text-align: center;
     align-items: center;
   }
-  .box-form {
+  .box {
+    margin-top: 10rem;
+  }
+  .box .box-form {
     max-width: 80%;
   }
   .box-form p {
