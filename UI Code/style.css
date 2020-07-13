@@ -61,7 +61,7 @@ ul {
   left: 0;
   width: 100%;
   z-index: 2;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
 }
 
 #navbar h1 {
@@ -74,6 +74,9 @@ ul {
 }
 #navbar ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 #navbar ul li {
@@ -82,11 +85,19 @@ ul {
   justify-content: center;
   text-align: center;
   font-size: 1rem;
+  height: 100%;
+  padding-right: 1rem;
 }
 
 #navbar ul li i {
   font-size: 1rem;
   padding-right: 0.5rem;
+}
+
+#navbar ul li:hover {
+  transition: all 0.3s ease-in;
+  background: var(--light-color);
+  color: var(--primary-color);
 }
 
 #navbar ul li a {
@@ -96,7 +107,7 @@ ul {
 #navbar ul li a:hover,
 #navbar ul li i:hover {
   opacity: 0.8;
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 #content {
@@ -248,7 +259,8 @@ ul {
 }
 
 .landing-content {
-  background: url("./img/white-house-1475938.jpg") center center/cover;
+  background: url("./img/architectural-design-architecture-beach-bridge-453201.jpg")
+    center center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,12 +268,13 @@ ul {
   text-align: center;
   width: 100%;
   height: 100vh;
-  margin-top: 70px;
+  /* margin-top: 70px; */
 }
 
 .landing-content h1 {
   font-size: 4rem;
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: white;
   padding: 1rem;
   font-weight: bold;
 }
@@ -283,6 +296,13 @@ ul {
   background: var(--dark-color);
   color: white;
   transition: all 0.5s ease-in-out;
+}
+
+.register {
+  margin-top: 5rem;
+}
+.custom-label {
+  margin-bottom: 0;
 }
 .content-dashboard {
   display: grid;
@@ -363,18 +383,24 @@ ul {
   font-size: 1rem;
 }
 .form-group {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .form-group input,
 .form-group label {
   display: block;
   width: 100%;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   padding: 0.5rem;
   border-radius: 5px;
 }
 .form-group input {
   border: 1px solid #ccc;
+  margin-top: 0.25rem;
+  width: 80%;
 }
 
 /* Ipad */
@@ -413,7 +439,7 @@ ul {
 }
 
 /* Phone */
-@media screen and (max-width: 421px) {
+@media screen and (max-width: 475px) {
   #navbar {
     display: flex;
     flex-direction: column;
@@ -440,7 +466,12 @@ ul {
   .landing-content p {
     font-size: 1.5rem;
   }
-
+  .register {
+    margin-top: 3rem;
+  }
+  .box {
+    margin-top: 5rem;
+  }
   .box-form {
     max-width: 80%;
   }
