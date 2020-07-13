@@ -355,8 +355,8 @@ ul {
   transition: all 0.5s ease-in-out;
 }
 .box-notice {
-  margin: 1rem 2rem;
-  margin-right: 1rem;
+  margin: 0 2rem;
+  margin-right: 0;
   border-radius: 5px;
   border: 1px solid var(--light-color);
 }
@@ -430,7 +430,7 @@ ul {
   .content-dashboard {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-columns: 2fr 3fr 2fr;
   }
   #grid-one-by-two {
     display: grid;
