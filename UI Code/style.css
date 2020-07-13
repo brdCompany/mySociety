@@ -632,4 +632,17 @@ ul {
   .table-body-row td {
     padding: 0.5rem;
   }
+
+  /* owners page */
+  #grid-one-by-three {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .search-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .search-box :nth-child(3) {
+    grid-column: 1 / span 2;
+  }
 }
