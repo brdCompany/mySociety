@@ -348,6 +348,11 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+#grid-one-by-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
 #grid-one-by-two h1 {
   color: var(--primary-color);
 }
@@ -446,7 +451,24 @@ ul {
   padding-top: 0.25rem;
 }
 
-/*-- Admin--*/
+/*-- Start Admin--*/
+/* Owners */
+.search-box {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+
+}
+.search-box input, .search-box select {
+  padding: .5rem;
+  height: 2.5rem;
+}
+.search-box a {
+  text-align: center;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+}
+
+
 
 /* Ipad */
 @media screen and (max-width: 768px) {
