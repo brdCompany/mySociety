@@ -192,9 +192,25 @@ ul {
   background: var(--primary-color);
   border-radius: 5px 5px 0 0;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 .owner-info-box-content {
-  height: 5rem;
+  height: 15rem;
+  padding: 4rem 1rem;
+}
+.owner-info-box-content h4 {
+  padding-bottom: 1rem;
+}
+.owner-info-box-img {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.owner-info-box-content img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
 }
 .bill-info {
   display: grid;
@@ -547,6 +563,11 @@ ul {
   #grid-one-by-two {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .owner-info-box-content {
+    display: flex !important;
+    flex-direction: column-reverse;
+    padding: 0rem 1rem;
   }
 }
 
