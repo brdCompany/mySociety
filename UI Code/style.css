@@ -281,6 +281,7 @@ ul {
 }
 .btn-add-owner {
   padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
 }
 
 .text-primary {
@@ -544,9 +545,12 @@ ul {
   background-color: var(--primary-color);
 }
 .add-owner a:hover {
-  background: var(--light-color);
+  background: var(--dark-color);
   transition: all 0.5s ease-in-out;
-  color: var(--dark-color);
+  color: var(--light-color);
+  padding: 0.4rem;
+  border-radius: 5px;
+  padding-right: 0.8rem;
 }
 .add-owner-form {
   display: grid;
