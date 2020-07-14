@@ -177,8 +177,24 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
 .box .box-action-button {
   text-align: end;
+}
+
+.owner-info-box {
+  padding: 0;
+  border-radius: 5px;
+}
+/* search owner */
+.box .box-header-primary {
+  margin: 0;
+  background: var(--primary-color);
+  border-radius: 5px 5px 0 0;
+  padding: 1rem;
+}
+.owner-info-box-content {
+  height: 5rem;
 }
 .bill-info {
   display: grid;
