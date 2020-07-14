@@ -267,6 +267,21 @@ ul {
   color: var(--light-color);
   transition: 0.5s all ease-in-out;
 }
+.btn-outline {
+  background: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: var(--light-color);
+  transition: all 0.5s ease-in-out;
+}
+.btn-add-owner {
+  padding: 0.5rem 1.5rem;
+}
 
 .text-primary {
   color: var(--primary-color);
@@ -502,6 +517,7 @@ ul {
 .search-box select {
   padding: 0.5rem;
   height: 2.5rem;
+  font-family: "Nunito", sans-serif;
 }
 .search-box a {
   text-align: center;
@@ -526,6 +542,35 @@ ul {
 }
 .select-filter:selected {
   background-color: var(--primary-color);
+}
+.add-owner a:hover {
+  background: var(--light-color);
+  transition: all 0.5s ease-in-out;
+  color: var(--dark-color);
+}
+.add-owner-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.add-owner-form .form-group {
+  align-items: start;
+}
+.add-owner-form .form-group input {
+  width: 100%;
+  border: 1px solid var(--light-color);
+  padding: 0.5rem;
+  font-family: "Nunito", sans-serif;
+}
+.add-owner-form .form-group input:focus {
+  border: 1px solid var(--light-color);
+}
+.add-owner-form :nth-child(7) {
+  grid-column: 3 / span 1;
+  justify-content: end;
+  text-align: center;
+  align-items: flex-end;
+  max-width: 200px;
 }
 
 /* Ipad */

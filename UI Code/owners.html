@@ -64,131 +64,142 @@
         </ul>
       </div>
       <!-- Main content -->
-      <div>
-        <h3 class="text-primary p-1">Search Owners</h3>
-        <div class="box search-box">
-          <input type="text" class="" placeholder="Enter search term" />
-          <select class="select-filter" name="searchFilter" id="searchFilter">
-            <option value="searchBy">Search By</option>
-            <option value="flatNo">Flat no</option>
-            <option value="block">Block</option>
-            <option value="name">Owner name</option>
-            <option value="contactNo">Contact no</option>
-            <option value="email">Email</option>
-          </select>
-          <a href="" class="btn btn-dark">Search</a>
-        </div>
-        <h4 class="text-primary p-1">Search results</h4>
 
-        <div id="grid-one-by-three">
-          <div class="box owner-info-box">
-            <div class="box-header-primary">
-              <h4 class="text-light">Flat no 1001</h4>
-              <h5 class="text-light">Block AB</h5>
-            </div>
-            <div id="grid-one-by-two" class="owner-info-box-content">
-              <div class="owner-info-box-details">
-                <h5 class="text-dark">Sumanta Das</h5>
-                <h5 class="text-dark">123456789</h5>
-                <h5 class="text-dark">abc@xyz.com</h5>
+      <div>
+        <!-- Add Owner Section -->
+        <div class="add-owner">
+          <h3 class="text-primary p-1"><a href="">Add Owner</a></h3>
+          <div class="box">
+            <form class="add-owner-form" action="">
+              <div class="form-group">
+                <!-- <label for="Owner Name">Owner Name</label> -->
+                <input
+                  type="text"
+                  name="Owner Name"
+                  id="ownerName"
+                  placeholder="Owner Name"
+                />
               </div>
-              <div class="owner-info-box-img">
-                <img src="./img/profile-image.png" alt="" />
+              <div class="form-group">
+                <!-- <label for="Owner Name">Co-Owner Name</label> -->
+                <input
+                  type="text"
+                  name="Owner Name"
+                  id="ownerName"
+                  placeholder="Co-owner Name"
+                />
               </div>
-            </div>
-            <div class="box-action-button">
-              <a href="" class="text-primary fa-2x p-1"
-                ><i class="fa fa-arrow-right" aria-hidden="true"></i
-              ></a>
+              <div class="form-group">
+                <!-- <label for="Owner Name">Flat No</label> -->
+                <input
+                  type="text"
+                  name="Owner Name"
+                  id="ownerName"
+                  placeholder="Flat No"
+                />
+              </div>
+              <div class="form-group">
+                <!-- <label for="Owner Name">Block No</label> -->
+                <input
+                  type="text"
+                  name="Owner Name"
+                  id="ownerName"
+                  placeholder="Block No"
+                />
+              </div>
+              <div class="form-group">
+                <!-- <label for="Owner Name">Email Address</label> -->
+                <input
+                  type="text"
+                  name="Owner Name"
+                  id="ownerName"
+                  placeholder="Email Address"
+                />
+              </div>
+              <div class="form-group">
+                <!-- <label for="Owner Name">Phone Number</label> -->
+                <input
+                  type="text"
+                  name="Owner Name"
+                  id="ownerName"
+                  placeholder="Phone Number"
+                />
+              </div>
+            </form>
+            <div class="box-action-button py-half">
+              <a href="" class="btn btn-primary btn-add-owner">Add Owner</a>
             </div>
           </div>
-          <div class="box owner-info-box">
-            <div class="box-header-primary">
-              <h4 class="text-light">Flat no 1001</h4>
-              <h5 class="text-light">Block AB</h5>
+        </div>
+        <!-- Search Section -->
+        <div>
+          <div>
+            <h3 class="text-primary p-1">Search Owners</h3>
+            <div class="box search-box">
+              <input type="text" class="" placeholder="Enter search term" />
+              <select
+                class="select-filter"
+                name="searchFilter"
+                id="searchFilter"
+              >
+                <option value="searchBy">Search By</option>
+                <option value="flatNo">Flat no</option>
+                <option value="block">Block</option>
+                <option value="name">Owner name</option>
+                <option value="contactNo">Contact no</option>
+                <option value="email">Email</option>
+              </select>
+              <a href="" class="btn btn-dark">Search</a>
             </div>
-            <div id="grid-one-by-two" class="owner-info-box-content">
-              <div class="owner-info-box-details">
-                <h5 class="text-dark">Sumanta Das</h5>
-                <h5 class="text-dark">123456789</h5>
-                <h5 class="text-dark">abc@xyz.com</h5>
+            <h4 class="text-primary p-1">Search results</h4>
+
+            <div id="grid-one-by-three">
+              <div class="box owner-info-box">
+                <div class="box-header-primary">
+                  <h4 class="text-light">Flat no 1001</h4>
+                  <h5 class="text-light">Block AB</h5>
+                </div>
+                <div id="grid-one-by-two" class="owner-info-box-content">
+                  <div class="owner-info-box-details">
+                    <h5 class="text-dark">Sumanta Das</h5>
+                    <h5 class="text-dark">123456789</h5>
+                    <h5 class="text-dark">abc@xyz.com</h5>
+                  </div>
+                  <div class="owner-info-box-img">
+                    <img src="./img/profile-image.png" alt="" />
+                  </div>
+                </div>
+                <div class="box-action-button">
+                  <a href="" class="text-primary fa-2x p-1"
+                    ><i class="fa fa-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
-              <div class="owner-info-box-img">
-                <img src="./img/profile-image.png" alt="" />
+              <div class="box owner-info-box">
+                <div class="box-header-primary">
+                  <h4 class="text-light">Flat no 1001</h4>
+                  <h5 class="text-light">Block AB</h5>
+                </div>
+                <div id="grid-one-by-two" class="owner-info-box-content">
+                  <div class="owner-info-box-details">
+                    <h5 class="text-dark">Sumanta Das</h5>
+                    <h5 class="text-dark">123456789</h5>
+                    <h5 class="text-dark">abc@xyz.com</h5>
+                  </div>
+                  <div class="owner-info-box-img">
+                    <img src="./img/profile-image.png" alt="" />
+                  </div>
+                </div>
+                <div class="box-action-button">
+                  <a href="" class="text-primary fa-2x p-1"
+                    ><i class="fa fa-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
-            </div>
-            <div class="box-action-button">
-              <a href="" class="text-primary fa-2x p-1"
-                ><i class="fa fa-arrow-right" aria-hidden="true"></i
-              ></a>
-            </div>
-          </div>
-          <div class="box owner-info-box">
-            <div class="box-header-primary">
-              <h4 class="text-light">Flat no 1001</h4>
-              <h5 class="text-light">Block AB</h5>
-            </div>
-            <div id="grid-one-by-two" class="owner-info-box-content">
-              <div class="owner-info-box-details">
-                <h5 class="text-dark">Sumanta Das</h5>
-                <h5 class="text-dark">123456789</h5>
-                <h5 class="text-dark">abc@xyz.com</h5>
-              </div>
-              <div class="owner-info-box-img">
-                <img src="./img/profile-image.png" alt="" />
-              </div>
-            </div>
-            <div class="box-action-button">
-              <a href="" class="text-primary fa-2x p-1"
-                ><i class="fa fa-arrow-right" aria-hidden="true"></i
-              ></a>
-            </div>
-          </div>
-          <div class="box owner-info-box">
-            <div class="box-header-primary">
-              <h4 class="text-light">Flat no 1001</h4>
-              <h5 class="text-light">Block AB</h5>
-            </div>
-            <div id="grid-one-by-two" class="owner-info-box-content">
-              <div class="owner-info-box-details">
-                <h5 class="text-dark">Sumanta Das</h5>
-                <h5 class="text-dark">123456789</h5>
-                <h5 class="text-dark">abc@xyz.com</h5>
-              </div>
-              <div class="owner-info-box-img">
-                <img src="./img/profile-image.png" alt="" />
-              </div>
-            </div>
-            <div class="box-action-button">
-              <a href="" class="text-primary fa-2x p-1"
-                ><i class="fa fa-arrow-right" aria-hidden="true"></i
-              ></a>
-            </div>
-          </div>
-          <div class="box owner-info-box">
-            <div class="box-header-primary">
-              <h4 class="text-light">Flat no 1001</h4>
-              <h5 class="text-light">Block AB</h5>
-            </div>
-            <div id="grid-one-by-two" class="owner-info-box-content">
-              <div class="owner-info-box-details">
-                <h5 class="text-dark">Sumanta Das</h5>
-                <h5 class="text-dark">123456789</h5>
-                <h5 class="text-dark">abc@xyz.com</h5>
-              </div>
-              <div class="owner-info-box-img">
-                <img src="./img/profile-image.png" alt="" />
-              </div>
-            </div>
-            <div class="box-action-button">
-              <a href="" class="text-primary fa-2x p-1"
-                ><i class="fa fa-arrow-right" aria-hidden="true"></i
-              ></a>
             </div>
           </div>
         </div>
       </div>
-
       <!-- notice board section -->
       <div class="box-notice bg-grey">
         <h3 class="p-1">Noticeboard</h3>
