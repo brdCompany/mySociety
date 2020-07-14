@@ -514,18 +514,25 @@ ul {
   display: grid;
   grid-template-columns: 3fr 2fr 1fr;
 }
+.search-box-bill {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
 .search-box input,
-.search-box select {
+.search-box select,
+.search-box-bill input,
+.search-box-bill select {
   padding: 0.5rem;
   height: 2.5rem;
   font-family: "Nunito", sans-serif;
 }
-.search-box a {
+.search-box a, .search-box-bill a {
   text-align: center;
   height: 2.5rem;
   padding: 0.5rem 1rem;
 }
-.search-box input {
+.search-box input, .search-box-bill input {
   border: 1px solid var(--light-color);
   border-radius: 5px;
   font-family: "Nunito", sans-serif;
@@ -575,6 +582,21 @@ ul {
   text-align: center;
   align-items: flex-end;
   max-width: 200px;
+}
+.table-head-row td {
+  border-bottom: 1px solid var(--primary-color);
+  padding: 0.5rem;
+}
+.table-body-row td {
+  padding: 0.5rem;
+}
+.table-body-row a i:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease-in;
+}
+.bills-table table{
+  overflow: auto;
+  width: 100%;
 }
 
 /* Ipad */
@@ -726,14 +748,9 @@ ul {
   }
   .bills-table {
     overflow: auto;
+    width: 100%;
   }
-  .table-head-row td {
-    border-bottom: 1px solid var(--primary-color);
-    padding: 0.5rem;
-  }
-  .table-body-row td {
-    padding: 0.5rem;
-  }
+
 
   /* owners page */
   #grid-one-by-three {
